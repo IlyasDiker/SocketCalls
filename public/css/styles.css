@@ -1,0 +1,74 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.chat-box {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.chat-box .chat-box-header {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  background: whitesmoke;
+}
+.chat-box .chat-box-header .user-bubble {
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: dodgerblue;
+  color: white;
+}
+.chat-box .chat-box-messages {
+  flex-grow: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  padding: 10px;
+}
+.chat-box .chat-box-input {
+  display: flex;
+  flex-direction: row;
+}
+.chat-box .chat-box-input input {
+  flex-grow: 1;
+  padding: 8px 12px;
+  font-size: 24px;
+}
+.chat-box .chat-box-input button {
+  padding: 8px 12px;
+  font-size: 24px;
+}
+.chat-box .message {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid whitesmoke;
+  border-radius: 20px;
+}
+.chat-box .message .user {
+  font-size: 16px;
+  opacity: 0.7;
+}
+.chat-box .message .value {
+  font-size: 24px;
+}
+
+.LOG {
+  background: black;
+  color: white;
+  padding: 15px;
+}
+
+/*# sourceMappingURL=styles.css.map */
