@@ -5,10 +5,26 @@ const socketio = require('socket.io');
 
 
 const app = express();
+const server = http.createServer(app);
+const io = socketio(server);
+
 const PORT = 3000 || process.env.PORT;
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(PORT, () => {
+io.on('connection', socket => {
+    socket.emit('message', 'Welcome');
+    socket.broadcast.emit('message', 'user connected');
+    socket.on('disconnect', ()=>{
+        io.emit('message', 'user left chat');
+    })
+
+    socket.on('chatMessage', (data) => {
+        console.log(data);
+        io.emit('chatMessage', data);
+    })
+})
+
+server.listen(PORT, () => {
     console.log(`Server running on ${PORT}`);
 })

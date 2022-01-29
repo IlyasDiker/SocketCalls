@@ -11,27 +11,38 @@
     <div class="app">
         <div class="chat-box">
             <div class="chat-box-header">
-                <div class="user-bubble">Ilyas</div>
-                <div class="user-bubble">Hiba</div>
+
             </div>
-            <div class="chat-box-messages">
-                <div class="message">
-                    <div class="user">
-                        TEST
-                    </div>
-                    <div class="value">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima quibusdam fugit reiciendis labore ad esse voluptate. Nihil veniam culpa perferendis obcaecati nesciunt dolor repellat nobis quidem! Omnis non modi deserunt.
-                    </div>
-                </div>
+            <div class="chat-box-messages" id="chat-box-messages">
+                
             </div>
             <div class="chat-box-input">
-                <input type="text" placeholder="Message">
-                <button>SEND</button>
+                <form action="" id="chat-form">.
+                    <input type="text" placeholder="Message" name="message" id="msg">
+                    <button onclick="">SEND</button>
+                </form>
             </div>
         </div>
         <div class="LOG">
             
         </div>
     </div>
+
+    <template id="message-template">
+        <div class="message">
+            <div class="user">
+                TEST
+            </div>
+            <div class="value" id="msg-value">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima quibusdam fugit reiciendis labore ad esse voluptate. Nihil veniam culpa perferendis obcaecati nesciunt dolor repellat nobis quidem! Omnis non modi deserunt.
+            </div>
+        </div>
+    </template>
+    <template id="user-template">
+        <div class="user-bubble">Ilyas</div>
+    </template>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
